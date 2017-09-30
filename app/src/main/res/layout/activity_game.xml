@@ -2,73 +2,74 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutId"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.blurryface.memorygame.GameActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="146dp"
+        android:layout_marginStart="146dp"
         android:text="Score"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginStart="146dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textScore"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="146dp" />
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/textScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="49dp"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginStart="44dp"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="49dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/textView2"
-        android:layout_marginLeft="44dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Level"
-        tools:layout_constraintTop_creator="1"
         android:layout_marginTop="31dp"
+        android:text="Level"
+        app:layout_constraintLeft_toLeftOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/textView2" />
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/levelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="31dp"
         android:text="1"
         app:layout_constraintRight_toLeftOf="@+id/textScore"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="31dp"
         app:layout_constraintTop_toBottomOf="@+id/textScore"
-        android:layout_marginRight="1dp" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/textWatchGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ready?"
-        tools:layout_constraintTop_creator="1"
         android:layout_marginTop="36dp"
+        android:text="Ready?"
+        app:layout_constraintLeft_toLeftOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/textView4" />
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/button1"
@@ -77,78 +78,78 @@
         android:layout_height="0dp"
         android:onClick="buttonClick"
         android:text="1"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintRight_toRightOf="@+id/button3"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintRight_toRightOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="135dp"
         android:layout_height="77dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:backgroundTint="@android:color/holo_blue_bright"
         android:onClick="buttonClick"
         android:text="2"
         android:textColorLink="@android:color/holo_green_light"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="24dp"
-        android:layout_marginRight="25dp" />
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <Button
         android:id="@+id/button3"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="135dp"
         android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:onClick="buttonClick"
         android:text="3"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/button4"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button4"
-        android:layout_marginLeft="16dp" />
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/button4"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="77dp"
-        android:backgroundTint="@android:color/holo_purple"
-        android:onClick="buttonClick"
-
-        android:text="4"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/replayBtn"
-        app:layout_constraintRight_toRightOf="@+id/button2"
-        tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="27dp"
-        app:layout_constraintLeft_toLeftOf="@+id/button2" />
+        android:backgroundTint="@android:color/holo_purple"
+
+        android:onClick="buttonClick"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/replayBtn"
+        app:layout_constraintLeft_toLeftOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="@+id/button2"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <Button
         android:id="@+id/replayBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="?android:attr/colorActivatedHighlight"
         android:onClick="buttonClick"
         android:text="Play"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintRight_creator="1" />
 </android.support.constraint.ConstraintLayout>

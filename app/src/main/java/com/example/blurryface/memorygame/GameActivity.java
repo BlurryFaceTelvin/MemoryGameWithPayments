@@ -2,12 +2,15 @@ package com.example.blurryface.memorygame;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Handler;
 import android.os.Message;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -19,6 +22,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
+
     float leftVolume = 1.0f;
     float rightVolume = 1.0f;
     int priority = 0;
@@ -146,6 +150,7 @@ public class GameActivity extends AppCompatActivity {
             {
                 textWatchGo.setText("Failed");
                 isResponding=false;
+                difficultLevel=1;
                 if(playerScore>highScore)
                 {
                     highScore =playerScore;
